@@ -1,14 +1,15 @@
-# word-variation
-generate missing variations for text in us-uk dictionary
+package com.legyver.wordvariation;
 
-## Usage
-1. Change the **Driver** application to point to the properties file you want to load
-2. Run the **Driver** application
-3. **result.properties** in the project root will contain the file with additional variations
+import com.legyver.wordvariation.api.Maximizer;
+import com.legyver.wordvariation.api.Tuple;
+import org.junit.jupiter.api.Test;
 
-## Examples
-Look at the Maximizer test for an example
-```java
+import java.io.InputStream;
+import java.util.List;
+import java.util.Properties;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
 public class MaximizerTest {
 
     @Test
@@ -26,4 +27,3 @@ public class MaximizerTest {
         assertThat(result).contains(new Tuple("sanitization", "sanitisation"));
     }
 }
-```
